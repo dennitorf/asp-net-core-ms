@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E168AA17-BABB-4ACA-8AA6-4F8B84EDCB3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{27E4B656-A59E-4CF3-8473-8842AAF32843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27E4B656-A59E-4CF3-8473-8842AAF32843} = {E168AA17-BABB-4ACA-8AA6-4F8B84EDCB3E}
+		{BD192F93-B2F3-4C4C-8C88-8019CE1EECF6} = {27E4B656-A59E-4CF3-8473-8842AAF32843}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FED6796-D28E-491F-858B-29B999D3ACF9}
