@@ -5,6 +5,8 @@ services:
     image: mongo
   redisdb:
     image: redis:alpine
+  portainer:
+    image: portainer/portainer-ce
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
@@ -16,7 +18,10 @@ services:
     build:
       context: .
       dockerfile: Services/Basket/Basket.API/Dockerfile
+  
+    
 
 volumes:
   mongo_data:
+  portainer_data:
     
