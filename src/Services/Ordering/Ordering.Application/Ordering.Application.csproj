@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Orders\Commands\" />
+    <Folder Include="Features\Orders\Commands\DeleteOrder\" />
   </ItemGroup>
 
   <ItemGroup>
