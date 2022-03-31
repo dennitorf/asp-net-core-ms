@@ -10,7 +10,7 @@ namespace Ordering.Domain.Common
     {
         public int Id { get; set; }
         public string CreatedBy { set; get; }
-        public DateTime CreatedData { get; set; }   
+        public DateTime CreatedDate { get; set; }   
         public string LastModifiedBy { set; get; }
         public DateTime? LastModifiedDate { set; get; }
     }
