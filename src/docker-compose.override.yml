@@ -83,6 +83,7 @@ services:
 
 
   discount.api:
+    container_name: discount.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "DatabaseSettings:ConnectionStrings=Server=discountdb;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234;"
@@ -104,6 +105,7 @@ services:
       - "80"    
 
   ordering.api:
+    container_name: ordering.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:OrderingConnectionString=Server=orderdb;Database=OrderDb;User Id=sa;Password=SwN12345678"  
@@ -116,8 +118,24 @@ services:
 
 
   ocelotapigw:
+    container_name: ocelotapigw    
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "8010:80"
+
+
+  shopping.aggregator:
+    container_name: shopping.aggregator
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ApiSettings:CatalogUrl=http://catalog.api
+      - ApiSettings:BasketUrl=http://basket.api
+      - ApiSettings:OrderingUrl=http://ordering.api
+    depends_on:
+      - catalog.api
+      - ordering.api
+      - basket.api
+    ports:
+      - "8005:80"
 
